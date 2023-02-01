@@ -1,0 +1,44 @@
+{
+	"name" : "cv.jit",
+	"displayname" : "",
+	"version" : "2.0.1",
+	"author" : "Jean-Marc Pelletier",
+	"authors" : [  ],
+	"description" : "A collection of max/msp/jitter externals, abstractions and help files for computer vision applications originally authored by Jean-Marc Pelletier.",
+	"tags" : [ "jitter", "computer vision", "hardware", "camera", "externals" ],
+	"website" : "https://github.com/Cycling74/cv.jit",
+	"extends" : "",
+	"extensible" : 0,
+	"max_version_min" : "8.0",
+	"max_version_max" : "none",
+	"os" : 	{
+		"macintosh" : 		{
+			"min_version" : "10.12.x",
+			"platform" : [ "x64", "aarch64" ]
+		}
+,
+		"windows" : 		{
+			"min_version" : "none",
+			"platform" : [ "x64" ]
+		}
+
+	}
+,
+	"homepatcher" : "cv.jit-Object Guide.maxpat",
+	"package_extra" : 	{
+		"reverse_domain" : "com.cycling74",
+		"copyright" : "Copyright (c) 2021 Cycling '74"
+	}
+,
+	"filelist" : 	{
+		"externals" : [ "cv.jit.binedge.mxe64", "cv.jit.binedge.mxo", "cv.jit.blobs.bounds.mxe64", "cv.jit.blobs.bounds.mxo", "cv.jit.blobs.centroids.mxe64", "cv.jit.blobs.centroids.mxo", "cv.jit.blobs.direction.mxe64", "cv.jit.blobs.direction.mxo", "cv.jit.blobs.elongation.mxe64", "cv.jit.blobs.elongation.mxo", "cv.jit.blobs.moments.mxe64", "cv.jit.blobs.moments.mxo", "cv.jit.blobs.orientation.mxe64", "cv.jit.blobs.orientation.mxo", "cv.jit.blobs.recon.mxe64", "cv.jit.blobs.recon.mxo", "cv.jit.blobs.sort.mxe64", "cv.jit.blobs.sort.mxo", "cv.jit.blur.mxe64", "cv.jit.blur.mxo", "cv.jit.calibration.mxe64", "cv.jit.calibration.mxo", "cv.jit.canny.mxe64", "cv.jit.canny.mxo", "cv.jit.centroids.mxe64", "cv.jit.centroids.mxo", "cv.jit.covariance.mxe64", "cv.jit.covariance.mxo", "cv.jit.dilate.mxe64", "cv.jit.dilate.mxo", "cv.jit.erode.mxe64", "cv.jit.erode.mxo", "cv.jit.extrema.mxe64", "cv.jit.extrema.mxo", "cv.jit.face.landmarks.mxe64", "cv.jit.face.landmarks.mxo", "cv.jit.faces.mxe64", "cv.jit.faces.mxo", "cv.jit.features.mxe64", "cv.jit.features.mxo", "cv.jit.findchessboardcorners.mxe64", "cv.jit.findchessboardcorners.mxo", "cv.jit.findhomography.mxe64", "cv.jit.findhomography.mxo", "cv.jit.floodfill.mxe64", "cv.jit.floodfill.mxo", "cv.jit.getperspective.mxe64", "cv.jit.getperspective.mxo", "cv.jit.hough.mxe64", "cv.jit.hough.mxo", "cv.jit.HSflow.mxe64", "cv.jit.HSflow.mxo", "cv.jit.kalman.mxe64", "cv.jit.kalman.mxo", "cv.jit.keypoints.match.mxe64", "cv.jit.keypoints.match.mxo", "cv.jit.keypoints.mxe64", "cv.jit.keypoints.mxo", "cv.jit.label.mxe64", "cv.jit.label.mxo", "cv.jit.learn.mxe64", "cv.jit.learn.mxo", "cv.jit.lines.mxe64", "cv.jit.lines.mxo", "cv.jit.LKflow.mxe64", "cv.jit.LKflow.mxo", "cv.jit.mass.mxe64", "cv.jit.mass.mxo", "cv.jit.mean.mxe64", "cv.jit.mean.mxo", "cv.jit.moments.mxe64", "cv.jit.moments.mxo", "cv.jit.noise.mxe64", "cv.jit.noise.mxo", "cv.jit.opticalflow.mxe64", "cv.jit.opticalflow.mxo", "cv.jit.perspective.mxe64", "cv.jit.perspective.mxo", "cv.jit.ravg.mxe64", "cv.jit.ravg.mxo", "cv.jit.resize.mxe64", "cv.jit.resize.mxo", "cv.jit.shift.mxe64", "cv.jit.shift.mxo", "cv.jit.sum.mxe64", "cv.jit.sum.mxo", "cv.jit.threshold.mxe64", "cv.jit.threshold.mxo", "cv.jit.track.mxe64", "cv.jit.track.mxo", "cv.jit.unproject.mxe64", "cv.jit.unproject.mxo" ],
+		"patchers" : [ "cv.jit.blobs.bounds.draw.maxpat", "cv.jit.blobs.centroids.draw.maxpat", "cv.jit.blobs.color.maxpat", "cv.jit.blobs.colour.maxpat", "cv.jit.blobs.direction.draw.maxpat", "cv.jit.blobs.elongation.draw.maxpat", "cv.jit.blobs.orient.draw.maxpat", "cv.jit.blobs.orientation.draw.maxpat", "cv.jit.cartopol.maxpat", "cv.jit.centroids.draw.maxpat", "cv.jit.changetype.maxpat", "cv.jit.circularity.maxpat", "cv.jit.close.maxpat", "cv.jit.direction.maxpat", "cv.jit.elongation.maxpat", "cv.jit.face.landmarks.draw.maxpat", "cv.jit.face.parts.maxpat", "cv.jit.face.rigidpoints.maxpat", "cv.jit.faces.draw.maxpat", "cv.jit.features.draw.maxpat", "cv.jit.features2track.maxpat", "cv.jit.flow.draw.maxpat", "cv.jit.framesub.maxpat", "cv.jit.hough2lines.maxpat", "cv.jit.iter.maxpat", "cv.jit.keypoints.draw.maxpat", "cv.jit.lines.draw.maxpat", "cv.jit.lowpass.maxpat", "cv.jit.module.presence.maxpat", "cv.jit.notempty.maxpat", "cv.jit.open.maxpat", "cv.jit.orientation.maxpat", "cv.jit.perimeter.maxpat", "cv.jit.poltocar.maxpat", "cv.jit.scale_source_&_lcd.maxpat", "cv.jit.shift.draw.maxpat", "cv.jit.stddev.maxpat", "cv.jit.touches.draw.maxpat", "cv.jit.touches.maxpat", "cv.jit.track.draw.maxpat", "cv.jit.undergrad.maxpat", "cv.jit.variance.maxpat", "utils/cv.input.chooser.maxpat" ],
+		"help" : [ "copyright-jmp.maxpat", "cv.jit.binedge.maxhelp", "cv.jit.blobs.bounds.maxhelp", "cv.jit.blobs.centroids.maxhelp", "cv.jit.blobs.direction.maxhelp", "cv.jit.blobs.elongation.maxhelp", "cv.jit.blobs.moments.maxhelp", "cv.jit.blobs.orientation.maxhelp", "cv.jit.blobs.recon.maxhelp", "cv.jit.blobs.sort.maxhelp", "cv.jit.blur.maxhelp", "cv.jit.calibration.maxhelp", "cv.jit.canny.maxhelp", "cv.jit.cartopol.maxhelp", "cv.jit.centroids.maxhelp", "cv.jit.changetype.maxhelp", "cv.jit.circularity.maxhelp", "cv.jit.close.maxhelp", "cv.jit.covariance.maxhelp", "cv.jit.dilate.maxhelp", "cv.jit.direction.maxhelp", "cv.jit.elongation.maxhelp", "cv.jit.erode.maxhelp", "cv.jit.extrema.maxhelp", "cv.jit.face.landmarks.maxhelp", "cv.jit.face.parts.maxhelp", "cv.jit.face.rigidpoints.maxhelp", "cv.jit.faces.maxhelp", "cv.jit.features.maxhelp", "cv.jit.features2track.maxhelp", "cv.jit.findchessboardcorners.maxhelp", "cv.jit.findhomography.maxhelp", "cv.jit.floodfill.maxhelp", "cv.jit.framesub.maxhelp", "cv.jit.getperspective.maxhelp", "cv.jit.hough.maxhelp", "cv.jit.hough2lines.maxhelp", "cv.jit.hsflow.maxhelp", "cv.jit.iter.maxhelp", "cv.jit.kalman.maxhelp", "cv.jit.keypoints.match.maxhelp", "cv.jit.keypoints.maxhelp", "cv.jit.label.maxhelp", "cv.jit.learn.maxhelp", "cv.jit.lines.maxhelp", "cv.jit.lkflow.maxhelp", "cv.jit.lowpass.maxhelp", "cv.jit.mass.maxhelp", "cv.jit.mean.maxhelp", "cv.jit.module.presence.maxhelp", "cv.jit.moments.maxhelp", "cv.jit.noise.maxhelp", "cv.jit.notempty.maxhelp", "cv.jit.open.maxhelp", "cv.jit.opticalflow.maxhelp", "cv.jit.orientation.maxhelp", "cv.jit.perimeter.maxhelp", "cv.jit.perspective.maxhelp", "cv.jit.poltocar.maxhelp", "cv.jit.ravg.maxhelp", "cv.jit.resize.maxhelp", "cv.jit.shift.maxhelp", "cv.jit.stddev.maxhelp", "cv.jit.sum.maxhelp", "cv.jit.threshold.maxhelp", "cv.jit.touches.maxhelp", "cv.jit.track.maxhelp", "cv.jit.undergrad.maxhelp", "cv.jit.unproject.maxhelp", "cv.jit.variance.maxhelp", "cvtitle.gif" ],
+		"media" : [ "abstract.jpg", "arrows.gif", "average_face.obj", "billiard.mp4", "carpe.gif", "checkerboard.mp4", "desk_with_picture.jpg", "durer_beetle.jpg", "Girl_with_a_Pearl_Earring.jpg", "head.obj", "Kusakabe_Kimbei_Four_Women.jpg", "pattern.png", "Tennis-ball.mp4" ],
+		"misc" : [ "average_face.mtl", "average_face_landmarks.txt", "average_face_landmarks3d_lbf.jxf", "average_face_landmarks_3d.txt", "copyright-jmp.maxpat", "face.landmarks.map.json", "haarFaceCascade1.xml", "haarFaceCascade2.xml", "haarFaceCascade3.xml", "haarFaceCascade4.xml", "head.mtl", "lbfmodel.yaml", "lbfmodel.yaml.map", "The_letter_A.mxb", "The_letter_M.mxb" ],
+		"extras" : [ "cv.jit-Object Guide.maxpat" ]
+	}
+,
+	"c74install" : 1,
+	"installdate" : 3750704203
+}
