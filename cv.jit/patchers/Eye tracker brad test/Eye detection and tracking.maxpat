@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
-			"revision" : 0,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 35.0, 84.0, 1468.0, 705.0 ],
+		"rect" : [ 250.0, 260.0, 1379.0, 826.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 9.0,
@@ -40,32 +40,11 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-27",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 5.5, 181.0, 222.0, 17.0 ],
-					"text" : "change the 2nd values to match camera resolution"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 968.0, 224.0, 186.0, 17.0 ],
-					"text" : "change this to be resolution of the camera"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-55",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 13.0, 682.0, 95.0, 19.0 ],
 					"text" : "jit.gl.syphonserver ctx"
 				}
@@ -222,8 +201,8 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 103.0, 200.0, 80.0, 19.0 ],
-					"text" : "scale 0 240 0 720"
+					"patching_rect" : [ 103.0, 200.0, 85.0, 19.0 ],
+					"text" : "scale 0 240 0 1080"
 				}
 
 			}
@@ -235,7 +214,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 13.0, 200.0, 85.0, 19.0 ],
-					"text" : "scale 0 320 0 1280"
+					"text" : "scale 0 320 0 1920"
 				}
 
 			}
@@ -264,6 +243,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 142.0, 442.0, 113.0, 29.0 ],
+					"presentation_linecount" : 2,
 					"text" : "jit.submatrix @dim 24 18 @offset 8 6"
 				}
 
@@ -425,8 +405,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 818.0, 224.0, 132.0, 19.0 ],
-					"text" : "jit.qt.grab 1280 720 @unique 1"
+					"patching_rect" : [ 818.0, 224.0, 137.0, 19.0 ],
+					"text" : "jit.qt.grab 1920 1080 @unique 1"
 				}
 
 			}
@@ -439,7 +419,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 169.0, 553.0, 98.0, 38.0 ],
+					"patching_rect" : [ 169.0, 553.0, 98.0, 37.0 ],
 					"text" : "Try to zoom in on pupil, works for me but for other subjects?"
 				}
 
@@ -589,8 +569,8 @@
 					"id" : "obj-105",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "jit_matrix" ],
+					"numoutlets" : 8,
+					"outlettype" : [ "jit_matrix", "jit_matrix", "float", "float", "float", "float", "int", "int" ],
 					"patching_rect" : [ 337.0, 371.0, 124.0, 19.0 ],
 					"text" : "cv.jit.faces.eyes.img"
 				}
@@ -647,8 +627,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 0,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1058,6 +1038,48 @@
 					"destination" : [ "obj-4", 0 ],
 					"midpoints" : [ 604.5, 95.463256999999999, 469.5, 95.463256999999999 ],
 					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-105", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-105", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-105", 5 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-105", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-105", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"source" : [ "obj-105", 7 ]
 				}
 
 			}
@@ -1552,108 +1574,108 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "cv.jit.face.features.draw.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Downloads/Eye tracker",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.face.features.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Downloads/Eye tracker",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.face.tilt.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Downloads/Eye tracker",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.ex.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Downloads/Eye tracker",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.eyes.img.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Downloads/Eye tracker",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.eyes.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Downloads/Eye tracker",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.largest.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Downloads/Eye tracker",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "cv.jit.faces.mxe64",
-				"type" : "mx64"
+				"name" : "cv.jit.faces.mxo",
+				"type" : "iLaX"
 			}
 , 			{
-				"name" : "cv.jit.features.mxe64",
-				"type" : "mx64"
+				"name" : "cv.jit.features.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "cv.jit.features2track.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../Documents/Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "cv.jit.moments.mxe64",
-				"type" : "mx64"
+				"name" : "cv.jit.moments.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "cv.jit.orientation.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../Documents/Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "cv.jit.resize.mxe64",
-				"type" : "mx64"
+				"name" : "cv.jit.resize.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "cv.jit.shift.draw.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../Documents/Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "cv.jit.shift.mxe64",
-				"type" : "mx64"
+				"name" : "cv.jit.shift.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "cv.jit.track.box.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Downloads/Eye tracker",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "cv.jit.track.mxe64",
-				"type" : "mx64"
+				"name" : "cv.jit.track.mxo",
+				"type" : "iLaX"
 			}
 , 			{
-				"name" : "jit.pass.mxe64",
-				"type" : "mx64"
+				"name" : "jit.gl.syphonserver.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0

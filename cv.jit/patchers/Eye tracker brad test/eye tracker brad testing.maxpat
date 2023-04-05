@@ -40,28 +40,6 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-27",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 5.5, 181.0, 222.0, 17.0 ],
-					"text" : "change the 2nd values to match camera resolution"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 968.0, 224.0, 186.0, 17.0 ],
-					"text" : "change this to be resolution of the camera"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-55",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -115,7 +93,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 224.0, 52.0, 154.0, 19.0 ],
-					"text" : "dim 180. 115."
+					"text" : "dim 126. 80."
 				}
 
 			}
@@ -175,7 +153,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 19.0, 602.0, 126.0, 19.0 ],
-					"text" : "offset 489 383"
+					"text" : "offset 470 165"
 				}
 
 			}
@@ -589,8 +567,8 @@
 					"id" : "obj-105",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "jit_matrix" ],
+					"numoutlets" : 8,
+					"outlettype" : [ "jit_matrix", "jit_matrix", "float", "float", "float", "float", "int", "int" ],
 					"patching_rect" : [ 337.0, 371.0, 124.0, 19.0 ],
 					"text" : "cv.jit.faces.eyes.img"
 				}
@@ -1058,6 +1036,48 @@
 					"destination" : [ "obj-4", 0 ],
 					"midpoints" : [ 604.5, 95.463256999999999, 469.5, 95.463256999999999 ],
 					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-105", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-105", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-105", 5 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-105", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-105", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"source" : [ "obj-105", 7 ]
 				}
 
 			}
@@ -1552,49 +1572,49 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "cv.jit.face.features.draw.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers/Eye tracker brad test",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.face.features.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers/Eye tracker brad test",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.face.tilt.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers/Eye tracker brad test",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.ex.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers/Eye tracker brad test",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.eyes.img.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers/Eye tracker brad test",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.eyes.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers/Eye tracker brad test",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.largest.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers/Eye tracker brad test",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1609,8 +1629,8 @@
 			}
 , 			{
 				"name" : "cv.jit.features2track.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../../../../Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1620,8 +1640,8 @@
 			}
 , 			{
 				"name" : "cv.jit.orientation.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../../../../Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1631,8 +1651,8 @@
 			}
 , 			{
 				"name" : "cv.jit.shift.draw.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../../../../Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1642,7 +1662,7 @@
 			}
 , 			{
 				"name" : "cv.jit.track.box.maxpat",
-				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers/Eye tracker brad test",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
