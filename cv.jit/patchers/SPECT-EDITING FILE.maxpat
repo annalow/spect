@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 43.0, 87.0, 1366.0, 705.0 ],
+		"rect" : [ 34.0, 87.0, 1366.0, 705.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 9.0,
@@ -40,6 +40,37 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"clipheight" : 70.0,
+					"data" : 					{
+						"clips" : [ 							{
+								"absolutepath" : "Macintosh HD:/Users/frankchytil/Desktop/OBS Recordings/Spect-OBS Recording Stitched.mp4",
+								"filename" : "Spect-OBS Recording Stitched.mp4",
+								"filekind" : "moviefile",
+								"id" : "u091000922",
+								"loop" : 1,
+								"content_state" : 								{
+									"loop" : 1
+								}
+
+							}
+ ]
+					}
+,
+					"drawto" : "",
+					"id" : "obj-55",
+					"loop" : 1,
+					"maxclass" : "jit.playlist",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "jit_matrix", "", "dictionary" ],
+					"output_texture" : 0,
+					"parameter_enable" : 0,
+					"patching_rect" : [ 84.0, 369.666666626930237, 185.0, 71.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-47",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
@@ -64,43 +95,12 @@
 			}
 , 			{
 				"box" : 				{
-					"clipheight" : 36.85046660900116,
-					"data" : 					{
-						"clips" : [ 							{
-								"absolutepath" : "Macintosh HD:/Users/frankchytil/Desktop/OBS Recordings/2023-04-26 10-13-24.mp4",
-								"filename" : "2023-04-26 10-13-24.mp4",
-								"filekind" : "moviefile",
-								"id" : "u055005996",
-								"loop" : 1,
-								"content_state" : 								{
-									"loop" : 1
-								}
-
-							}
- ]
-					}
-,
-					"drawto" : "",
-					"id" : "obj-67",
-					"loop" : 3,
-					"maxclass" : "jit.playlist",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "jit_matrix", "", "dictionary" ],
-					"output_texture" : 0,
-					"parameter_enable" : 0,
-					"patching_rect" : [ 103.700934767723083, 412.241433322429657, 168.280373752117157, 37.85046660900116 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-53",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 298.788849115371704, 455.666666626930237, 88.0, 19.0 ],
+					"patching_rect" : [ 75.788849115371704, 542.666666626930237, 88.0, 19.0 ],
 					"text" : "prepend alphablend"
 				}
 
@@ -2074,16 +2074,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"midpoints" : [ 753.16667377948761, 93.681833626930242, 708.16667377948761, 93.681833626930242 ],
-					"source" : [ "obj-6", 0 ]
+					"destination" : [ "obj-47", 1 ],
+					"source" : [ "obj-55", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-47", 1 ],
-					"source" : [ "obj-67", 0 ]
+					"destination" : [ "obj-4", 0 ],
+					"midpoints" : [ 753.16667377948761, 93.681833626930242, 708.16667377948761, 93.681833626930242 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -2128,7 +2128,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "2023-04-26 10-13-24.mp4",
+				"name" : "Spect-OBS Recording Stitched.mp4",
 				"bootpath" : "~/Desktop/OBS Recordings",
 				"patcherrelativepath" : "../../../../../Desktop/OBS Recordings",
 				"type" : "mpg4",
