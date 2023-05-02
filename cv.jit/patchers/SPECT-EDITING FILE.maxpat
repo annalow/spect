@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 413.0, 87.0, 993.0, 705.0 ],
+		"rect" : [ 43.0, 87.0, 1366.0, 705.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 9.0,
@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-47",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 259.788849115371704, 569.666666626930237, 41.0, 19.0 ],
+					"text" : "switch 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 100.517656922340393, 573.999999642372131, 70.666667580604553, 19.0 ],
+					"text" : "jit.xfade"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"clipheight" : 36.85046660900116,
 					"data" : 					{
@@ -76,8 +100,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 298.788849115371704, 455.666666626930237, 66.0, 19.0 ],
-					"text" : "prepend xfade"
+					"patching_rect" : [ 298.788849115371704, 455.666666626930237, 88.0, 19.0 ],
+					"text" : "prepend alphablend"
 				}
 
 			}
@@ -113,7 +137,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 298.788849115371704, 362.576408743858337, 112.0, 19.0 ],
-					"text" : "if $f1 > 3000 then 0 else 1"
+					"text" : "if $f1 > 3000 then 1 else 2"
 				}
 
 			}
@@ -1652,6 +1676,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-47", 2 ],
+					"order" : 1,
+					"source" : [ "obj-105", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
 					"order" : 0,
 					"source" : [ "obj-105", 0 ]
@@ -1662,14 +1694,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-51", 0 ],
 					"source" : [ "obj-105", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-52", 1 ],
-					"order" : 1,
-					"source" : [ "obj-105", 0 ]
 				}
 
 			}
@@ -1714,7 +1738,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-53", 0 ],
+					"destination" : [ "obj-47", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -2015,6 +2039,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-47", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-48", 0 ]
 				}
@@ -2036,20 +2067,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-52", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-52", 0 ],
-					"source" : [ "obj-53", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-54", 0 ]
 				}
@@ -2065,7 +2082,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-52", 0 ],
+					"destination" : [ "obj-47", 1 ],
 					"source" : [ "obj-67", 0 ]
 				}
 
@@ -2113,56 +2130,56 @@
 		"dependency_cache" : [ 			{
 				"name" : "2023-04-26 10-13-24.mp4",
 				"bootpath" : "~/Desktop/OBS Recordings",
-				"patcherrelativepath" : "./OBS Recordings",
+				"patcherrelativepath" : "../../../../../Desktop/OBS Recordings",
 				"type" : "mpg4",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.face.features.draw.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.face.features.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.face.tilt.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.ex.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.eyes.img.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.eyes.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.faces.largest.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2176,8 +2193,8 @@
 			}
 , 			{
 				"name" : "cv.jit.features2track.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2187,8 +2204,8 @@
 			}
 , 			{
 				"name" : "cv.jit.orientation.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2198,8 +2215,8 @@
 			}
 , 			{
 				"name" : "cv.jit.shift.draw.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2209,8 +2226,8 @@
 			}
 , 			{
 				"name" : "cv.jit.track.box.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"bootpath" : "~/Documents/GitHub/spect/cv.jit/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
